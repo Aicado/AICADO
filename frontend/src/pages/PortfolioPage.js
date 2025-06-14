@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import '../App.css';
+import { GraphQLClient, gql } from 'graphql-request';
+// App.css is imported in App.js for global styles
 
-const placeholderProjectImage = '/images/placeholder-project.png';
+const GQL_ENDPOINT = 'http://localhost:5000/graphql';
 
 const PortfolioPage = () => {
-  const portfolioItems = [
-    { imgSrc: placeholderProjectImage, title: 'Collectibles E-commerce Platform', description: 'An advanced e-commerce solution...', link: '#' },
-    { imgSrc: placeholderProjectImage, title: 'AI-Driven Analytics Dashboard', description: 'A custom dashboard providing real-time business intelligence...', link: '#' },
-    { imgSrc: placeholderProjectImage, title: 'NLP Chatbot for Customer Support', description: 'An intelligent chatbot that automates customer service...', link: '#' }
-  ];
+  const [portfolioItems, setPortfolioItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const client = new GraphQLClient(GQL_ENDPOINT);
+    const query = gql`
+      query GetAllPortfolioItems {
+        allPortfolioItems {
+          id
+          title
+          description
+          imageUrl
+          caseStudyUrl
+        }
+      }
+    `;
+
+    client.request(query)
+      .then((data) => {
+        setPortfolioItems(data.allPortfolioItems);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error fetching portfolio items:', err);
+        setError('Failed to load portfolio items. Please try again later.');
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <>
@@ -22,18 +47,25 @@ const PortfolioPage = () => {
 
       <section className='container content-section'>
         <h2>Project Showcase</h2>
-        <div className='portfolio-grid'>
-          {portfolioItems.map((item, index) => (
-            <div key={index} className='portfolio-item'>
-              <img src={item.imgSrc} alt={item.title} />
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <Link to={item.link}>View Case Study (Coming Soon)</Link>
-            </div>
-          ))}
-        </div>
+        {loading && <p>Loading portfolio items...</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {!loading && !error && portfolioItems.length === 0 && <p>No portfolio items available at the moment.</p>}
+
+        {!loading && !error && (
+          <div className='portfolio-grid'>
+            {portfolioItems.map((item) => (
+              <div key={item.id} className='portfolio-item'>
+                <img src={item.imageUrl} alt={item.title} />
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <Link to={item.caseStudyUrl}>View Case Study (Coming Soon)</Link>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
     </>
   );
 };
+
 export default PortfolioPage;

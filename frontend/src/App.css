@@ -330,3 +330,20 @@ footer p {
 .text-center {
     text-align: center;
 }
+
+
+/* Service Item Icon Styling */
+.service-item-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    float: left;
+    background-color: #eee; /* Light background for placeholder */
+    padding: 5px;
+    border-radius: 5px;
+    object-fit: contain; /* Ensures icon isn't distorted */
+}
+
+.service-item .clear-float { /* Utility to clear float if needed */
+    clear: both;
+}

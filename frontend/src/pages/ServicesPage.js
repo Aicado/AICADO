@@ -1,7 +1,39 @@
-import React from 'react';
-// import '../App.css';
+import React, { useEffect, useState } from 'react';
+import { GraphQLClient, gql } from 'graphql-request';
+// App.css is imported in App.js for global styles
+
+const GQL_ENDPOINT = 'http://localhost:5000/graphql'; // Ensure backend is running here
 
 const ServicesPage = () => {
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const client = new GraphQLClient(GQL_ENDPOINT);
+    const query = gql`
+      query GetAllServices {
+        allServices {
+          id
+          title
+          description
+          iconName 
+        }
+      }
+    `;
+
+    client.request(query)
+      .then((data) => {
+        setServices(data.allServices);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error fetching services:', err);
+        setError('Failed to load services. Please try again later.');
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <section id='services-hero' className='page-hero'>
@@ -13,28 +45,27 @@ const ServicesPage = () => {
 
       <section className='container content-section'>
         <h2>What We Offer</h2>
-        <div className='service-item'>
-          <h3>AI-Powered Website Development</h3>
-          <p>We design and develop intelligent websites that offer personalized experiences, smart features, and data-driven insights. From dynamic content generation to AI-driven user interaction, we build platforms that engage and convert.</p>
-        </div>
-        <div className='service-item'>
-          <h3>Custom AI Tool Creation</h3>
-          <p>Have a unique challenge? We build bespoke AI tools and applications tailored to your specific needs. This includes natural language processing solutions, computer vision systems, predictive analytics models, and more.</p>
-        </div>
-        <div className='service-item'>
-          <h3>AI-Powered E-commerce Platforms</h3>
-          <p>Transform your online store with intelligent features. We develop e-commerce solutions with AI-driven product recommendations, personalized shopping experiences, intelligent search, fraud detection, and inventory optimization.</p>
-        </div>
-        <div className='service-item'>
-          <h3>AI Strategy & Consultation</h3>
-          <p>Not sure where to start with AI? We provide expert consultation to help you identify opportunities for AI integration, define a clear strategy, and create a roadmap for successful implementation.</p>
-        </div>
-        <div className='service-item'> {/* :last-child will handle no border in App.css */}
-          <h3>Data Analytics & Insights</h3>
-          <p>Unlock the power of your data. We help you collect, process, and analyze data to gain valuable insights, make informed decisions, and optimize your operations using machine learning techniques.</p>
-        </div>
+        {loading && <p>Loading services...</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Keeping error style inline for simplicity */}
+        {!loading && !error && services.length === 0 && <p>No services available at the moment.</p>}
+        
+        {!loading && !error && services.map((service) => (
+          <div key={service.id} className='service-item'>
+            {service.iconName && 
+              <img 
+                src={`/images/${service.iconName}`} 
+                alt={`${service.title} icon`} 
+                className='service-item-icon'
+              />
+            }
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+            <div className='clear-float'></div> {/* Utility class to clear float */}
+          </div>
+        ))}
       </section>
     </>
   );
 };
+
 export default ServicesPage;
