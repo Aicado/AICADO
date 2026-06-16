@@ -3,12 +3,20 @@ import React, { useState } from 'react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [status, setStatus] = useState('idle'); // 'idle', 'submitting', 'success'
+
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
-    alert('Thank you for your message! (This is a placeholder)');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setStatus('submitting');
+
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Form data submitted:', formData);
+      setStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 1500);
   };
 
   return (
@@ -40,7 +48,19 @@ const ContactPage = () => {
               <label htmlFor='message'>Message:</label>
               <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required></textarea>
             </div>
-            <button type='submit' className='cta-button'>Send Message</button>
+            <button
+              type='submit'
+              className='cta-button'
+              disabled={status === 'submitting'}
+              aria-live='polite'
+            >
+              {status === 'submitting' ? 'Sending...' : 'Send Message'}
+            </button>
+            {status === 'success' && (
+              <p className='success-message' role='status'>
+                Thank you! Your message has been sent successfully.
+              </p>
+            )}
           </form>
         </div>
         <div className='contact-info-container'>
