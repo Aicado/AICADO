@@ -154,6 +154,18 @@ a:hover {
     text-decoration: none;
 }
 
+.cta-button:disabled {
+    background: #a0c4f1; /* Lightened AICADO Blue */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.success-message {
+    color: #28a745; /* Success Green */
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
 /* Home Page Specific Styles */
 .hero { /* Hero section on the home page */
     text-align: center;
