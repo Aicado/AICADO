@@ -10,6 +10,17 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Better focus styles for keyboard users */
+:focus-visible {
+    outline: 3px solid #2a77de;
+    outline-offset: 2px;
+}
+
+/* Hide focus ring for mouse users if focus-visible is supported */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -152,6 +163,11 @@ a:hover {
 .cta-button:hover {
     background: #215dab; /* Darker AICADO Blue */
     text-decoration: none;
+}
+
+.cta-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #f4f7f6, 0 0 0 5px #2a77de;
 }
 
 .cta-button:disabled {
@@ -320,6 +336,13 @@ a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: none;
+    border-color: #2a77de;
+    box-shadow: 0 0 0 4px rgba(42, 119, 222, 0.2);
 }
 .form-group textarea {
     resize: vertical;
