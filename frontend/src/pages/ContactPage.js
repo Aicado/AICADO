@@ -54,12 +54,19 @@ const ContactPage = () => {
               disabled={status === 'submitting'}
               aria-live='polite'
             >
-              {status === 'submitting' ? 'Sending...' : 'Send Message'}
+              {status === 'submitting' ? (
+                <>
+                  <span className='spinner' aria-hidden='true'></span>
+                  Sending...
+                </>
+              ) : (
+                'Send Message'
+              )}
             </button>
             {status === 'success' && (
-              <p className='success-message' role='status'>
+              <div className='success-message' role='status' aria-live='polite'>
                 Thank you! Your message has been sent successfully.
-              </p>
+              </div>
             )}
           </form>
         </div>
