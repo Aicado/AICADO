@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { GraphQLClient, gql } from 'graphql-request';
 // App.css is imported in App.js for global styles
 
-const GQL_ENDPOINT = 'http://localhost:5000/graphql'; // Ensure backend is running here
+const GQL_ENDPOINT = process.env.REACT_APP_API_URL || 'http://localhost:5000/graphql';
 
 const ServicesPage = () => {
   const [services, setServices] = useState([]);
