@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
-// import '../App.css';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
-  const [status, setStatus] = useState('idle'); // 'idle', 'submitting', 'success'
+  const [status, setStatus] = useState('idle');
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('submitting');
-
-    // Simulate API call
     setTimeout(() => {
-      console.log('Form data submitted:', formData);
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     }, 1500);
@@ -22,45 +18,32 @@ const ContactPage = () => {
   return (
     <>
       <section id='contact-hero' className='page-hero'>
-        <div className='container'>
-          <h1>Contact Us</h1>
-          <p>Let's discuss how AICADO can help your business thrive.</p>
-        </div>
+        <div className='container'><h1>Contact Us</h1><p>Let's discuss how AICADO can help your business thrive.</p></div>
       </section>
-
-      <section className='container content-section contact-section-flex'> {/* Added new class for flex */}
+      <section className='container content-section contact-section-flex'>
         <div className='contact-form-container'>
           <h2>Send Us a Message</h2>
           <form onSubmit={handleSubmit}>
             <div className='form-group'>
-              <label htmlFor='name'>Full Name:</label>
-              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required />
+              <label htmlFor='name'>Full Name <span className='required' aria-hidden='true'>*</span>:</label>
+              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required placeholder='John Doe' />
             </div>
             <div className='form-group'>
-              <label htmlFor='email'>Email Address:</label>
-              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required />
+              <label htmlFor='email'>Email Address <span className='required' aria-hidden='true'>*</span>:</label>
+              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required placeholder='john@example.com' />
             </div>
             <div className='form-group'>
-              <label htmlFor='subject'>Subject:</label>
-              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required />
+              <label htmlFor='subject'>Subject <span className='required' aria-hidden='true'>*</span>:</label>
+              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required placeholder='How can we help?' />
             </div>
             <div className='form-group'>
-              <label htmlFor='message'>Message:</label>
-              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required></textarea>
+              <label htmlFor='message'>Message <span className='required' aria-hidden='true'>*</span>:</label>
+              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required placeholder='Your message here...'></textarea>
             </div>
-            <button
-              type='submit'
-              className='cta-button'
-              disabled={status === 'submitting'}
-              aria-live='polite'
-            >
-              {status === 'submitting' ? 'Sending...' : 'Send Message'}
+            <button type='submit' className='cta-button' disabled={status === 'submitting'} aria-live='polite'>
+              {status === 'submitting' ? <><span className='spinner' aria-hidden='true'></span>Sending...</> : 'Send Message'}
             </button>
-            {status === 'success' && (
-              <p className='success-message' role='status'>
-                Thank you! Your message has been sent successfully.
-              </p>
-            )}
+            {status === 'success' && <p className='success-message' role='status'>Thank you! Your message has been sent successfully.</p>}
           </form>
         </div>
         <div className='contact-info-container'>

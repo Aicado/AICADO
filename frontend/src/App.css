@@ -161,10 +161,16 @@ a:hover {
 }
 
 .success-message {
-    color: #28a745; /* Success Green */
-    margin-top: 1rem;
-    font-weight: bold;
+    background: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 0.75rem 1.25rem;
+    border-radius: 4px; margin-top: 1rem; font-weight: bold;
 }
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top: 2px solid #fff;
+    width: 14px; height: 14px; animation: spin 1s linear infinite; display: inline-block;
+    margin-right: 8px; vertical-align: middle;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.required { color: #d93025; margin-left: 2px; }
 
 /* Home Page Specific Styles */
 .hero { /* Hero section on the home page */
