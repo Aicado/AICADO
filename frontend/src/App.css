@@ -385,3 +385,44 @@ main:focus {
 .service-item .clear-float { /* Utility to clear float if needed */
     clear: both;
 }
+
+/* Accessibility - Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #2a77de;
+    color: white !important;
+    padding: 8px 16px;
+    z-index: 2000;
+    transition: top 0.2s ease;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 5px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Global Focus Styles */
+/* Using :focus-visible to only show focus ring for keyboard users */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 119, 222, 0.6);
+}
+
+/* Specific override for elements with solid background to ensure contrast */
+.cta-button:focus-visible {
+    box-shadow: 0 0 0 2px white, 0 0 0 5px rgba(42, 119, 222, 0.6);
+}
+
+/* Target main content focus from skip link */
+#main-content:focus {
+    outline: none;
+}
