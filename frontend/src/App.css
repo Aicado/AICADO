@@ -161,9 +161,34 @@ a:hover {
 }
 
 .success-message {
-    color: #28a745; /* Success Green */
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
     margin-top: 1rem;
     font-weight: bold;
+}
+
+.required-star {
+    color: #dc3545;
+    margin-left: 2px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 /* Home Page Specific Styles */
