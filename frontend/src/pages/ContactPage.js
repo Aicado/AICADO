@@ -33,20 +33,20 @@ const ContactPage = () => {
           <h2>Send Us a Message</h2>
           <form onSubmit={handleSubmit}>
             <div className='form-group'>
-              <label htmlFor='name'>Full Name:</label>
-              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required />
+              <label htmlFor='name'>Full Name: <span className='required-asterisk' aria-hidden='true'>*</span></label>
+              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required aria-required='true' placeholder='Jane Doe' />
             </div>
             <div className='form-group'>
-              <label htmlFor='email'>Email Address:</label>
-              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required />
+              <label htmlFor='email'>Email Address: <span className='required-asterisk' aria-hidden='true'>*</span></label>
+              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required aria-required='true' placeholder='jane.doe@example.com' />
             </div>
             <div className='form-group'>
-              <label htmlFor='subject'>Subject:</label>
-              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required />
+              <label htmlFor='subject'>Subject: <span className='required-asterisk' aria-hidden='true'>*</span></label>
+              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required aria-required='true' placeholder='How can we help you?' />
             </div>
             <div className='form-group'>
-              <label htmlFor='message'>Message:</label>
-              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required></textarea>
+              <label htmlFor='message'>Message: <span className='required-asterisk' aria-hidden='true'>*</span></label>
+              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required aria-required='true' placeholder='Tell us about your project...'></textarea>
             </div>
             <button
               type='submit'
@@ -54,7 +54,12 @@ const ContactPage = () => {
               disabled={status === 'submitting'}
               aria-live='polite'
             >
-              {status === 'submitting' ? 'Sending...' : 'Send Message'}
+              {status === 'submitting' ? (
+                <>
+                  <span className='spinner' aria-hidden='true'></span>
+                  Sending...
+                </>
+              ) : 'Send Message'}
             </button>
             {status === 'success' && (
               <p className='success-message' role='status'>
