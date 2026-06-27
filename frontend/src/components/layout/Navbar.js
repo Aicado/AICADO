@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className='container'>
-        <Link to='/' className='logo-link'>
+        <Link to='/' className='logo-link' aria-label='AICADO - Home'>
           AICADO
         </Link>
         <ul>
