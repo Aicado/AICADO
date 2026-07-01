@@ -34,19 +34,37 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit}>
             <div className='form-group'>
               <label htmlFor='name'>Full Name<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required aria-required='true' />
+              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required aria-required='true' placeholder='Enter your full name' />
             </div>
             <div className='form-group'>
               <label htmlFor='email'>Email Address<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required aria-required='true' />
+              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required aria-required='true' placeholder='Enter your email address' />
             </div>
             <div className='form-group'>
               <label htmlFor='subject'>Subject<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required aria-required='true' />
+              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required aria-required='true' placeholder='Enter the subject of your message' />
             </div>
             <div className='form-group'>
               <label htmlFor='message'>Message<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required aria-required='true'></textarea>
+              <textarea
+                id='message'
+                name='message'
+                rows='6'
+                value={formData.message}
+                onChange={handleChange}
+                required
+                aria-required='true'
+                maxLength='1000'
+                placeholder='Enter your message here...'
+                aria-describedby='message-counter'
+              ></textarea>
+              <div
+                id='message-counter'
+                className='form-help-text'
+                aria-live='polite'
+              >
+                {formData.message.length}/1000 characters
+              </div>
             </div>
             <button
               type='submit'
