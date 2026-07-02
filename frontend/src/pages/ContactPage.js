@@ -4,8 +4,13 @@ import React, { useState } from 'react';
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle'); // 'idle', 'submitting', 'success'
+  const MESSAGE_LIMIT = 500;
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'message' && value.length > MESSAGE_LIMIT) return;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +51,20 @@ const ContactPage = () => {
             </div>
             <div className='form-group'>
               <label htmlFor='message'>Message<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required aria-required='true'></textarea>
+              <textarea
+                id='message'
+                name='message'
+                rows='6'
+                maxLength={MESSAGE_LIMIT}
+                value={formData.message}
+                onChange={handleChange}
+                required
+                aria-required='true'
+                aria-describedby='message-counter'
+              ></textarea>
+              <span id='message-counter' className='form-help-text' aria-live='polite'>
+                {formData.message.length} / {MESSAGE_LIMIT} characters
+              </span>
             </div>
             <button
               type='submit'
