@@ -391,6 +391,14 @@ main:focus {
     margin-left: 4px;
 }
 
+.form-help-text {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+    text-align: right;
+}
+
 .spinner {
     display: inline-block;
     width: 1rem;
