@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // App.css is imported in App.js, so styles should be available
 // import '../App.css'; // Can be removed if App.js imports it globally
 
-const GQL_ENDPOINT = 'http://localhost:5000/graphql';
+const GQL_ENDPOINT = process.env.REACT_APP_API_URL || 'http://localhost:5000/graphql';
 
 const placeholderMlIcon = '/images/icon-ml.png';
 const placeholderNlpIcon = '/images/icon-nlp.png';
