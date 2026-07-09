@@ -9,3 +9,7 @@
 ## 2025-05-15 - Visual Cues for Required Fields
 **Learning:** Adding a visible red asterisk alongside `aria-required` provides a clearer experience for all users, not just those using screen readers. Placing the asterisk before the colon in labels maintains a professional look while ensuring the indicator is clearly associated with the field name.
 **Action:** Use the `.required-asterisk` class with a `<span>*</span>` inside labels, placed before any colons, and pair it with `aria-required="true"` on the input.
+
+## 2026-07-09 - Character Counter Accessibility
+**Learning:** For inputs with character limits, a real-time counter associated via `aria-describedby` and `aria-live="polite"` ensures that screen reader users are kept informed of their remaining space without constant interruptions.
+**Action:** Implement character counters using a small help text element with `aria-live="polite"` and link it to the input using `aria-describedby`.
