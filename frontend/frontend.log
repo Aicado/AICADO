@@ -1,0 +1,166 @@
+
+> frontend@0.1.0 start /app/frontend
+> react-scripts start
+
+(node:47656) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:47656) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.2:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Failed to compile.
+
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/hot/dev-server.js' in '/app/frontend'
+
+webpack compiled with 4 errors
+Failed to compile.
+
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.17_react-refresh@0.11.0_type-fest@0.21.3_webpa_c216f96840816e9bb9b98890ff6188e3/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/hot/dev-server.js' in '/app/frontend'
+
+webpack compiled with 4 errors
+Failed to compile.
+
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.17_react-refresh@0.11.0_type-fest@0.21.3_webpa_c216f96840816e9bb9b98890ff6188e3/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/hot/dev-server.js' in '/app/frontend'
+
+webpack compiled with 4 errors
+Failed to compile.
+
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.17_react-refresh@0.11.0_type-fest@0.21.3_webpa_c216f96840816e9bb9b98890ff6188e3/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/hot/dev-server.js' in '/app/frontend'
+
+ERROR in Error: Child compilation failed:
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/html-webpack-plugin@5.6.7_webpack@5.108.4_postcss@8.5.16_/node_modules/html-webpack-plugin/lib/loader.js' in '/app/frontend'
+ModuleNotFoundError: Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/html-webpack-plugin@5.6.7_webpack@5.108.4_postcss@8.5.16_/node_modules/html-webpack-plugin/lib/loader.js' in '/app/frontend'
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/Compilation.js:2251:28
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:1092:13
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:10:1)
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:476:22
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:9:1)
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:658:22
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:195:10
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:894:23
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:1406:5
+    at /app/frontend/node_modules/.pnpm/neo-async@2.6.2/node_modules/neo-async/async.js:2830:7
+    at done (/app/frontend/node_modules/.pnpm/neo-async@2.6.2/node_modules/neo-async/async.js:2925:13)
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:1369:23
+    at finishWithoutResolve (/app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:955:11)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1048:13
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:27:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:94:43
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:27:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:94:43
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:52:15
+    at runDispatch (/app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:100:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:11)
+
+1 ERROR in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
+webpack compiled with 6 errors
+Failed to compile.
+
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/babel-loader@8.4.1_@babel+core@7.29.7_webpack@5.108.4_postcss@8.5.16_/node_modules/babel-loader/lib/index.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.17_react-refresh@0.11.0_type-fest@0.21.3_webpa_c216f96840816e9bb9b98890ff6188e3/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/webpack-dev-server@4.15.2_webpack@5.108.4_postcss@8.5.16_/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/app/frontend'
+
+ERROR in Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/hot/dev-server.js' in '/app/frontend'
+
+ERROR in Error: Child compilation failed:
+Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/html-webpack-plugin@5.6.7_webpack@5.108.4_postcss@8.5.16_/node_modules/html-webpack-plugin/lib/loader.js' in '/app/frontend'
+ModuleNotFoundError: Module not found: Error: Can't resolve '/app/frontend/node_modules/.pnpm/html-webpack-plugin@5.6.7_webpack@5.108.4_postcss@8.5.16_/node_modules/html-webpack-plugin/lib/loader.js' in '/app/frontend'
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/Compilation.js:2251:28
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:1092:13
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:10:1)
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:476:22
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:9:1)
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:658:22
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:195:10
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:894:23
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:1406:5
+    at /app/frontend/node_modules/.pnpm/neo-async@2.6.2/node_modules/neo-async/async.js:2830:7
+    at done (/app/frontend/node_modules/.pnpm/neo-async@2.6.2/node_modules/neo-async/async.js:2925:13)
+    at /app/frontend/node_modules/.pnpm/webpack@5.108.4_postcss@8.5.16/node_modules/webpack/lib/NormalModuleFactory.js:1369:23
+    at finishWithoutResolve (/app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:955:11)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1048:13
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:27:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:94:43
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:27:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:94:43
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/Resolver.js:1132:5
+    at eval (eval at create (/app/frontend/node_modules/.pnpm/tapable@2.3.3/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)
+    at /app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:52:15
+    at runDispatch (/app/frontend/node_modules/.pnpm/enhanced-resolve@5.24.2/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:100:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:84:11)
+
+webpack compiled with 5 errors
+ ELIFECYCLE  Command failed.
+ WARN   Local package.json exists, but node_modules missing, did you mean to install?
