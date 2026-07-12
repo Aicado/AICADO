@@ -9,3 +9,7 @@
 ## 2025-05-15 - Visual Cues for Required Fields
 **Learning:** Adding a visible red asterisk alongside `aria-required` provides a clearer experience for all users, not just those using screen readers. Placing the asterisk before the colon in labels maintains a professional look while ensuring the indicator is clearly associated with the field name.
 **Action:** Use the `.required-asterisk` class with a `<span>*</span>` inside labels, placed before any colons, and pair it with `aria-required="true"` on the input.
+
+## 2026-07-12 - Balancing Standards and CSS Constraints
+**Learning:** In micro-UX tasks where adding new CSS classes is prohibited, using existing typography classes (like `.post-meta`) paired with inline React styles for layout (e.g., `textAlign: 'right'`) allows for accessible enhancements like character counters without violating design system boundaries.
+**Action:** Before adding a new CSS class, audit `App.css` for existing utility or component classes that can be repurposed with minor inline adjustments.
