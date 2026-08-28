@@ -7,9 +7,8 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object('config.Config')
 
-    # Enable CORS for all domains on all routes
-    # For production, you might want to restrict this to specific origins
-    CORS(app)
+    # Enable CORS for specified domains
+    CORS(app, origins=app.config.get('ALLOWED_ORIGINS'))
 
     app.add_url_rule(
         '/graphql',
