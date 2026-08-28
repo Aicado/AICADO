@@ -1,4 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 class Config:
     DEBUG = True
-    SECRET_KEY = 'aicado_backend_secret_key_!@#$'
+    SECRET_KEY = os.getenv('SECRET_KEY')
     # Add other backend configurations if needed

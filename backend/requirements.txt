@@ -3,3 +3,4 @@ Flask-GraphQL
 graphene
 # Add other Python dependencies here (e.g., Flask-CORS if frontend/backend are on different ports during dev)
 Flask-CORS
+python-dotenv
