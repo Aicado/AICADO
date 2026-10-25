@@ -58,7 +58,7 @@ const PortfolioPage = () => {
                 <img src={item.imageUrl} alt={item.title} />
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <Link to={item.caseStudyUrl}>View Case Study (Coming Soon)</Link>
+                <Link to={item.caseStudyUrl} aria-label={`View case study for ${item.title}`}>View Case Study (Coming Soon)</Link>
               </div>
             ))}
           </div>
