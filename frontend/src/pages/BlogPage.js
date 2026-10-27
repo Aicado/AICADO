@@ -25,7 +25,7 @@ const BlogPage = () => {
               <h3>{post.title}</h3>
               <p className='post-meta'>Published on: {post.date} by {post.author}</p>
               <p>{post.summary}</p>
-              <Link to={post.link}>Read More</Link>
+              <Link to={post.link} aria-label={`Read more about ${post.title}`}>Read More</Link>
             </article>
           ))}
         </div>
