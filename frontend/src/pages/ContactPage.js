@@ -34,19 +34,38 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit}>
             <div className='form-group'>
               <label htmlFor='name'>Full Name<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <input type='text' id='name' name='name' value={formData.name} onChange={handleChange} required aria-required='true' />
+              <input type='text' id='name' name='name' placeholder='Jane Doe' value={formData.name} onChange={handleChange} required aria-required='true' />
             </div>
             <div className='form-group'>
               <label htmlFor='email'>Email Address<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <input type='email' id='email' name='email' value={formData.email} onChange={handleChange} required aria-required='true' />
+              <input type='email' id='email' name='email' placeholder='jane@example.com' value={formData.email} onChange={handleChange} required aria-required='true' />
             </div>
             <div className='form-group'>
               <label htmlFor='subject'>Subject<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <input type='text' id='subject' name='subject' value={formData.subject} onChange={handleChange} required aria-required='true' />
+              <input type='text' id='subject' name='subject' placeholder='Project Inquiry' value={formData.subject} onChange={handleChange} required aria-required='true' />
             </div>
             <div className='form-group'>
               <label htmlFor='message'>Message<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required aria-required='true'></textarea>
+              <textarea
+                id='message'
+                name='message'
+                rows='6'
+                maxLength={500}
+                placeholder='Tell us how we can help your business...'
+                value={formData.message}
+                onChange={handleChange}
+                required
+                aria-required='true'
+                aria-describedby='message-counter'
+              ></textarea>
+              <div
+                id='message-counter'
+                className='post-meta'
+                style={{ textAlign: 'right', display: 'block', marginTop: '0.25rem' }}
+                aria-live='polite'
+              >
+                {formData.message.length}/500 characters
+              </div>
             </div>
             <button
               type='submit'
