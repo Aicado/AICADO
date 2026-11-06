@@ -46,7 +46,25 @@ const ContactPage = () => {
             </div>
             <div className='form-group'>
               <label htmlFor='message'>Message<span className='required-asterisk' aria-hidden='true'>*</span>:</label>
-              <textarea id='message' name='message' rows='6' value={formData.message} onChange={handleChange} required aria-required='true'></textarea>
+              <textarea
+                id='message'
+                name='message'
+                rows='6'
+                maxLength={500}
+                aria-describedby='message-counter'
+                value={formData.message}
+                onChange={handleChange}
+                required
+                aria-required='true'
+              ></textarea>
+              <div
+                id='message-counter'
+                className='post-meta'
+                style={{ textAlign: 'right', display: 'block', marginTop: '4px' }}
+                aria-live='polite'
+              >
+                {formData.message.length}/500 characters
+              </div>
             </div>
             <button
               type='submit'
