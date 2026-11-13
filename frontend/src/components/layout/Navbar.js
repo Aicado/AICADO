@@ -4,8 +4,8 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <header>
-      <nav className='container'>
-        <Link to='/' className='logo-link'>
+      <nav className='container' aria-label='Main Navigation'>
+        <Link to='/' className='logo-link' aria-label='AICADO - Home'>
           AICADO
         </Link>
         <ul>
