@@ -9,6 +9,9 @@ const Layout = ({ children }) => {
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navbar />
       <main id="main-content">
+      <a href="#main-content" className="skip-link">Skip to Content</a>
+      <Navbar />
+      <main id="main-content" tabIndex="-1">
         {/* The container class here provides centered, max-width content area */}
         {/* Individual pages can choose to use it or have full-width sections */}
         {children}
