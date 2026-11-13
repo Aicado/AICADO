@@ -6,6 +6,9 @@ import '../../App.css'; // For .container styles or other global layout styles
 const Layout = ({ children }) => {
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <Navbar />
+      <main id="main-content">
       <a href="#main-content" className="skip-link">Skip to Content</a>
       <Navbar />
       <main id="main-content" tabIndex="-1">
